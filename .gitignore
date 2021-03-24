@@ -13,3 +13,6 @@ run/
 *.un~
 .tsbuildinfo
 .tsbuildinfo.*
+dist-ssr
+*.local
+build
