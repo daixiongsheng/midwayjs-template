@@ -1,16 +1,9 @@
-import { hooks, createConfiguration } from '@midwayjs/hooks';
-import { Application } from '@midwayjs/koa';
-import bodyParser from 'koa-bodyparser';
-import * as orm from '@midwayjs/orm';
+import { hooks, createConfiguration } from '@midwayjs/hooks'
+import { Application } from '@midwayjs/koa'
+import bodyParser from 'koa-bodyparser'
+
 export default createConfiguration({
-    importConfigs: [
-        './config/', // 自动加载 config 目录下所有 配置文件
-    ],
-    imports: [
-        '@midwayjs/koa', // 加载 egg 能力组件
-        orm,
-        hooks(),
-    ],
+  imports: [hooks()],
 }).onReady((_, app: Application) => {
-    app.use(bodyParser());
-});
+  app.use(bodyParser())
+})

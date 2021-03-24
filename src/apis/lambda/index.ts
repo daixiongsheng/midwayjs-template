@@ -1,33 +1,20 @@
-import { useContext, useInject } from '@midwayjs/hooks';
-
-import { useHeader, usePath } from '../hooks/request';
-import { UserService } from '../service/user';
+import { useContext } from '@midwayjs/hooks'
 
 function useKoaContext() {
-    return useContext();
+  return useContext()
 }
 
 export default async () => {
-    return {
-        message: 'Hello World',
-        method: useKoaContext().method,
-    };
-};
-
-export async function login(username: string, password: string) {
-    console.log('hello', username, password);
-    const userService = await useInject(UserService);
-    const user = userService.create();
-
-    return {
-        msg: 'hello world, login successfully',
-        ctx: useKoaContext(),
-        header: useHeader(),
-        path: usePath(),
-        user,
-    };
+  return {
+    message: 'Hello World',
+    method: useKoaContext().method,
+  }
 }
 
-export async function post(name: string) {
-    return 'post' + name;
+export const get = async () => {
+  return 'get'
+}
+
+export const post = async (name: string) => {
+  return 'post' + name
 }
