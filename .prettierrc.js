@@ -1,5 +1,6 @@
 module.exports = {
     ...require('mwts/.prettierrc.json'),
     singleQuote: true,
-    tabWidth: 4
+    tabWidth: 2,
+    semi: false
 };
