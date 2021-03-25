@@ -1,0 +1,20 @@
+{
+    "mew.enable": false,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "vue",
+        "markdown",
+        "css",
+        "sass",
+        "less"
+    ],
+    "eslint.validate": [
+        "css",
+    ],
+}
