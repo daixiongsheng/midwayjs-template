@@ -8,7 +8,8 @@
     "build:client": "tsc && vite build",
     "build:server": "mw build",
     "serve": "vite preview",
-    "test": "jest"
+    "test": "jest",
+    "prettier": "prettier --write './src/**/*.{js,jsx,tsx,ts,less,md,json}'"
   },
   "dependencies": {
     "@midwayjs/decorator": "^2.9.0",
