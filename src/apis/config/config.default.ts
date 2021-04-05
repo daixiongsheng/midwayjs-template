@@ -32,16 +32,16 @@ export default (appInfo: EggAppInfo): DefaultConfig => {
   //     replaceEggLogger: true,
   // };
 
-  config.orm = {
-    type: 'mysql',
-    host: 'demo.com',
-    port: 3306,
-    username: 'test',
-    password: 'test',
-    database: 'test',
-    synchronize: true,
-    logging: true,
-  }
+  // config.orm = {
+  //   type: 'mysql',
+  //   host: 'test.com',
+  //   port: 3306,
+  //   username: 'test',
+  //   password: 'test',
+  //   database: 'test',
+  //   synchronize: true,
+  //   logging: true,
+  // }
 
   config.ors = {
     origin: '*',

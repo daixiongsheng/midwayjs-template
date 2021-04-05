@@ -16,3 +16,4 @@ run/
 dist-ssr
 *.local
 build
+.env

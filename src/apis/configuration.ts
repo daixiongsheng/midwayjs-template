@@ -1,5 +1,6 @@
 import { hooks, createConfiguration } from '@midwayjs/hooks'
 import { Application } from '@midwayjs/koa'
+import { IMidwayContainer, MidwayContainer } from '@midwayjs/core'
 import bodyParser from 'koa-bodyparser'
 import * as orm from '@midwayjs/orm'
 export default createConfiguration({
@@ -8,9 +9,11 @@ export default createConfiguration({
   ],
   imports: [
     '@midwayjs/koa', // 加载 egg 能力组件
-    orm,
+    // orm,
     hooks(),
   ],
-}).onReady((_, app: Application) => {
+}).onReady((container: IMidwayContainer, app: Application) => {
+  console.log(container instanceof MidwayContainer)
+
   app.use(bodyParser())
 })
